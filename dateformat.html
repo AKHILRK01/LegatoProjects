@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<head>
+<title>dateformat</title>
+<head>
+<body>
+<h3>The date sequence format</h3>
+<p id="id1"></p>
+<script>
+function formatDate(date) {
+  var monthNames = [
+    "January", "February", "March",
+    "April", "May", "June", "July",
+    "August", "September", "October",
+    "November", "December"
+  ];
+
+  var day = date.getDate();
+  var monthIndex = date.getMonth();
+  var year = date.getFullYear();
+  var d = new Date("01/29/2019");
+  document.getElementById("id1").innerHTML = d;
+
+  return day + ' ' + monthNames[monthIndex] + ' ' + year;
+}
+
+console.log(formatDate(new Date()));
+</script>
+</body>
+</html>
